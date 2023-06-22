@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.15)
 #
 
 project(
-  "Project"
+  "namesaker"
   VERSION 0.1.0
   LANGUAGES CXX
 )
@@ -60,6 +60,8 @@ include(cmake/Vcpkg.cmake)
 
 # Find all headers and implementation files
 include(cmake/SourcesAndHeaders.cmake)
+
+set(${PROJECT_NAME}_BUILD_EXECUTABLE true)
 
 if(${PROJECT_NAME}_BUILD_EXECUTABLE)
   add_executable(${PROJECT_NAME} ${exe_sources})
